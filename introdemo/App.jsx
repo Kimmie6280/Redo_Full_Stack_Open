@@ -1,13 +1,15 @@
 const App = () => {
-
-   console.log("hi there")
-   const hello = "my name is kim"
-  return (
-    <div>
-      <p>Hello world</p>
-      <p>{hello}</p>
-    </div>
+  const now = new Date()
+  const a = 10
+  const b = 20
+  return React.createElement(
+    'div',
+    null,
+    React.createElement(
+      'p', null, 'Hello world, it is ', now.toString()
+    ),
+    React.createElement(
+      'p', null, a, ' plus ', b, ' is ', a + b
+    )
   )
 }
-
-export default App
