@@ -10,18 +10,23 @@ const Header =(props) =>{
   )
 }
 
+//Part components of which each renders the name and number of exercises of one part.
+const Part = ({ name, exercise }) => {
+  return (
+    <p>{name} {exercise}</p>
+  )
+}
 /*Content renders the parts and their number of exercises */ 
+
 const Content = (props) =>{
 
   return(
-    <div>
+    <>
+      <Part name={props.part1} exercise={props.exercise1}/>
+      <Part name={props.part2} exercise={props.exercise2}/>
+      <Part name={props.part3} exercise={props.exercise3}/>
 
-    <p>{props.part1} {props.exercises1}</p> 
-    <p>{props.part2} {props.exercises2}</p> 
-    <p>{props.part3} {props.exercises3}</p>
-
-    </div>
-    
+    </>
   )
 }
 
@@ -46,9 +51,11 @@ const App = () => {
     <div>
       <Header course={course}/>
       <Content 
-      part1={part1} exercises1={exercises1} 
-      part2={part2} exercises2={exercises2} 
-      part3={part3} exercises3={exercises3}/>
+  part1={part1} exercise1={exercises1}
+  part2={part2} exercise2={exercises2}
+  part3={part3} exercise3={exercises3}
+/>
+     
       <Total exercises1={exercises1} exercises2={exercises2}exercises3={exercises3}/>
     </div>
   )
