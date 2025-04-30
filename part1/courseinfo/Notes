@@ -1,0 +1,27 @@
+How current APP works
+
+4 components:
+Header
+Part
+Content
+Total
+
+All components take props 
+
+The component will build whats being displayed 
+
+Header:
+  returns  <h1> {props.course} </h1>
+  here I passed props and a name in the h1 tag in my APP
+  in header I call the header component and pass the course= {course}
+
+Part:
+  return  <p>{name} {exercise}</p>
+  I pass name and excerise and in my content I call Part where I pass the 
+  name and props.part's' and exercise= props.exercise's'
+
+Content: 
+  takes props I pass Part and then the name={parts} and exercise={excerise}
+
+Total:
+  takes props and i add all the props.excerises
